@@ -50,6 +50,11 @@ app.get('/sensordata', (req, res)=>{
     res.render('sensordata');
 });
 
+app.get('/sensordata2', (req, res)=>{
+    res.render('sensordata2');
+});
+
+
 app.get('/get_pin', (req, res)=>{
     res.status(200).send({pin_status:pin_status});
 })

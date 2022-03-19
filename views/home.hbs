@@ -14,9 +14,15 @@
 <!-- div centered both horizontally and vertically -->
 <div style="position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);" class="centered">
   <button id ="tog" type="button" onclick="toggleDarkmode()">OFF</button>
-  <!--button to redirect to the sensor display page-->
-  <button type="button" onclick="window.location.href='/sensordata'">Sensor Data</button>
-  </div>  
+  <!--dropdown buttons-->
+  <div class="dropdown">
+    <button class="dropbtn">Sensor data</button>
+    <div class="dropdown-content">
+      <a href="/sensordata2">Kalyan</a>
+      <a href="/sensordata">Airoli</a>
+    </div>
+  </div>
+</div>
 <script>
   let toggle = () => {
     let fetchRes = fetch('/get_pin');
